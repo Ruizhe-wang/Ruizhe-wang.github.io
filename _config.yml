@@ -62,7 +62,7 @@ author:
   avatar : "/assets/images/bio-photo.jpg"
   # bio    : "My awesome biography constrained to a sentence or two goes here."
   location : "China"
-  email : "ruizhewang7627@outlook.com
+  email : "ruizhewang7627@outlook.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
