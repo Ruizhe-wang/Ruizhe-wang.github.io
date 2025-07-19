@@ -3,6 +3,6 @@ permalink: /about/
 title: "About"
 ---
 
-Tempor velit sint sunt ipsum tempor enim ad qui ullamco. Est dolore anim ad velit duis dolore minim sunt aliquip amet commodo labore. Ut eu pariatur aute ea aute excepteur laborum. Esse ea esse excepteur minim mollit qui cillum excepteur ex dolore magna. Labore deserunt fugiat incididunt incididunt sint ea. Consequat dolore aute laboris quis proident quis non et est consectetur ex eiusmod sit culpa.
+Hi, I am Ruizhe Wang (王睿哲 in chinese). I have recently completed my master’s degree in Quantitative Biology and Bioinformatics at the Australian National University, where I gained a solid foundation in both computational methods and biological sciences. During my studies, I became particularly interested in how machine learning techniques can be applied to complex biological problems, especially in understanding the structural configurations of RNA and proteins. 
 
-Cupidatat ea do et in excepteur in. Ad nostrud ut est esse eu duis ea sunt eiusmod. Aliquip tempor veniam sint elit fugiat. Velit incididunt laboris amet incididunt labore dolore irure velit excepteur commodo deserunt laborum. Consectetur eu fugiat veniam veniam Lorem labore magna eiusmod. Ea occaecat reprehenderit pariatur consectetur minim labore ut aliquip.
+Although I am still at an early stage of this field, I have been actively self‑studying advanced topics in machine learning and structural bioinformatics to broaden my skills and deepen my understanding. I am genuinely eager to join an academic research environment, learn from experienced researchers, and contribute my effort and curiosity to meaningful scientific work.
