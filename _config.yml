@@ -81,6 +81,7 @@ author:
     #   url: "https://instagram.com/"
 
 footer:
+  text: "I'm just learning to build this website. Please excuse any issues or imperfections. Thank you for visiting!"
   links:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
