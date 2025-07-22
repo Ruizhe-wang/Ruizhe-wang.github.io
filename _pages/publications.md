@@ -6,16 +6,4 @@ author_profile: true
 
 ## Publications
 
-Here you can find my published research papers and academic contributions.
-
-### Journal Articles
-
-*Coming soon...*
-
-### Conference Papers
-
-*Coming soon...*
-
-### Preprints
-
-*Coming soon...*
+Yu, S., **Wang, R.**, Jiang, C., Jiang, C., Liu, Y., Zhu, Q*. Molecular characterization and functional analysis of a Fucose-binding Lectin Isolated from *Trachidermus fasciatus* (TfFBL) INvlved in Antibacterial Defense. Fish & shellfish Immunology (Submitted to the journal)
