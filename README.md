@@ -1,6 +1,24 @@
-# Minimal Mistakes remote theme starter
+# Ruizhe Wang's Website
 
-Click [**Use this template**](https://github.com/mmistakes/mm-github-pages-starter/generate) button above for the quickest method of getting started with the [Minimal Mistakes Jekyll theme](https://github.com/mmistakes/minimal-mistakes).
+This is my website built with Jekyll using the [Minimal Mistakes Jekyll theme](https://github.com/mmistakes/minimal-mistakes).
+
+## About This Site
+
+This website serves as my personal portfolio and academic homepage, featuring:
+
+- About me page
+- Publications and research papers
+- Research projects  
+- Educational background
+
+
+The site is built using Jekyll, a static site generator, and hosted on GitHub Pages.
+
+---
+
+## Original Template Information
+
+This site was created using the Minimal Mistakes remote theme starter.
 
 Contains basic configuration to get you a site with:
 
@@ -13,8 +31,6 @@ Contains basic configuration to get you a site with:
 - Sample about page.
 - Sample 404 page.
 - Site wide search.
-
-Replace sample content with your own and [configure as necessary](https://mmistakes.github.io/minimal-mistakes/docs/configuration/).
 
 ---
 
