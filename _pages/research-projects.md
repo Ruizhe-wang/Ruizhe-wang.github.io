@@ -4,15 +4,12 @@ title: "Research Projects"
 author_profile: true
 ---
 
-## Research Projects
-
 Overview of my research projects.
 
-### Molecular cloning and functional studies of F-type lectin  
-**From roughskin sculpin (*Trachidermus fasciatus*)**  
+### Molecular cloning and functional studies of F-type lectin **From roughskin sculpin (*Trachidermus fasciatus*)**  
 - **Supervisor:** Dr. Shanshan Yu (Marine College, SDU)  
 - Conducted gene cloning, sequence analysis, structural prediction, tissue distribution, expression profiling, stimulus‑induced changes, and in‑vitro bioactivity tests  
-- **Co‑authored 1 academic paper**
+- Co‑authored 1 academic paper
 
 ### Application of GAN model integrating evolutionary information in RNA secondary structure prediction  
 - **Supervisor:** Brian Parker and Jiayu Wen (John Curtin School of Medical Research, ANU)  
