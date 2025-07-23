@@ -13,6 +13,6 @@ author_profile: true
 
 ## Honors and Awards
 
-2022.06 SDU-ANU joint science college third-grade Scholarship
+2022.06 SDU-ANU joint science college third-grade Scholarship  1,000￥
 
-2023.05 ANU Director's Scholarship for Academic Excellence
+2023.05 ANU Director's Scholarship for Academic Excellence   A$ 15,000
