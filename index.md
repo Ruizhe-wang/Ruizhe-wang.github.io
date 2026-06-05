@@ -9,7 +9,7 @@ permalink: /
 
 I am Ruizhe Wang (王睿哲), an MSc graduate in Quantitative Biology and Bioinformatics from the Australian National University. I work on **AI for science** — building machine learning methods that turn complex biological data into understanding.
 
-My current focus is **representation learning**: I am developing **dimension-reduction** approaches that reveal meaningful structure in high-dimensional biological data. More broadly, I am interested in how learned representations can advance RNA structure prediction, structural bioinformatics, and data-driven scientific discovery.
+I am currently a **research intern at the Tsientang Institute for Advanced Study (TIAS)**, where my focus is **representation learning**: I am developing **dimension-reduction** approaches that reveal meaningful structure in high-dimensional biological data. More broadly, I am interested in how learned representations can advance RNA structure prediction, structural bioinformatics, and data-driven scientific discovery.
 
 I am currently looking for research opportunities where I can contribute to AI-for-science and computational biology projects and continue developing as a researcher.
 
