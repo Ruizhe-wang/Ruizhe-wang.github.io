@@ -15,13 +15,11 @@
 # in the templates via {{ site.myvariable }}.
 title: Ruizhe Wang
 email: ruizhewang7627@outlook.com
-# description: >- # this means to ignore newlines until "baseurl:"
-#   Write an awesome description for your new site here. You can edit this
-#   line in _config.yml. It will appear in your document head meta (for
-#   Google search results) and in your feed.xml site description.
-twitter_username: username
-github_username: username
-minimal_mistakes_skin: default
+description: >-
+  Ruizhe Wang — MSc in Quantitative Biology & Bioinformatics (ANU).
+  Applying machine learning to structural biology and computational genomics.
+github_username: Ruizhe-wang
+minimal_mistakes_skin: air
 search: true
 
 # Build settings
@@ -60,16 +58,16 @@ plugins:
 author:
   name   : "Ruizhe Wang"
   avatar : "/assets/images/bio-photo.jpg"
-  # bio    : "My awesome biography constrained to a sentence or two goes here."
+  bio    : "MSc in Quantitative Biology & Bioinformatics (ANU). Applying machine learning to structural biology."
   location : "China"
   email : "ruizhewang7627@outlook.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:ruizhewang7627@outlook.com"
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://ruizhe-wang.github.io/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/Ruizhe-wang"
     - label: "CV"
       icon: "fas fa-fw fa-file-pdf"
       url: "/assets/cv.pdf"
@@ -84,17 +82,13 @@ author:
     #   url: "https://instagram.com/"
 
 footer:
-  text: "I'm just learning to build this website. Please excuse any issues or imperfections. Thank you for visiting!"
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+      url: "https://github.com/Ruizhe-wang"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:ruizhewang7627@outlook.com"
 
 defaults:
   # _posts

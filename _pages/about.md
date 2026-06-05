@@ -1,8 +1,11 @@
 ---
 permalink: /about/
 title: "About"
+author_profile: true
 ---
 
-Hi, I am Ruizhe Wang (王睿哲 in chinese). I have recently completed my master’s degree in Quantitative Biology and Bioinformatics at the Australian National University, where I gained a solid foundation in both computational methods and biological sciences. During my studies, I became particularly interested in how machine learning techniques can be applied to complex biological problems. 
+Hi, I am **Ruizhe Wang** (王睿哲). I recently completed my Master of Science in Quantitative Biology and Bioinformatics at the **Australian National University**, building a strong foundation across computational methods and the biological sciences.
 
-Although I am still at an early stage of this field, I have been actively self‑studying advanced topics in machine learning and structural bioinformatics to broaden my skills and deepen my understanding. I am genuinely eager to join an academic research environment, learn from experienced researchers, and contribute my effort and curiosity to meaningful scientific work.
+My research interests sit at the intersection of **machine learning and structural biology** — in particular, how deep learning can help us understand and predict biological structure and function. During my master's I worked on integrating evolutionary information into **RNA secondary-structure prediction** using generative adversarial networks, and earlier I contributed to molecular and functional studies of marine lectins and antimicrobial peptides.
+
+I continue to deepen my skills through self-study in advanced machine learning and structural bioinformatics. I am actively looking to join a research group where I can contribute to meaningful scientific work and grow as a researcher. Feel free to reach out by [email](mailto:ruizhewang7627@outlook.com) or explore my work on [GitHub](https://github.com/Ruizhe-wang).
