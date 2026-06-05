@@ -17,7 +17,7 @@ title: Ruizhe Wang
 email: ruizhewang7627@outlook.com
 description: >-
   Ruizhe Wang — MSc in Quantitative Biology & Bioinformatics (ANU).
-  Applying machine learning to structural biology and computational genomics.
+  AI for science: representation learning and dimension reduction for biological data.
 github_username: Ruizhe-wang
 minimal_mistakes_skin: air
 search: true
@@ -56,7 +56,7 @@ plugins:
 author:
   name   : "Ruizhe Wang"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "MSc in Quantitative Biology & Bioinformatics (ANU). Machine learning for structural biology and computational genomics."
+  bio    : "MSc in Quantitative Biology & Bioinformatics (ANU). AI for science — representation learning & dimension reduction."
   location : "China"
   email : "ruizhewang7627@outlook.com"
   links:

@@ -9,9 +9,10 @@ author_profile: true
 - Data analysis, statistical modelling, and reproducible computational workflows
 
 **Machine learning and deep learning**
+- Representation learning and dimension reduction for high-dimensional data
 - Machine learning for biological sequence and structure problems
 - Generative adversarial networks for RNA secondary-structure prediction
-- Ongoing study in deep learning, structural bioinformatics, and computational genomics
+- Ongoing study in deep learning, structural bioinformatics, and AI for science
 
 **Bioinformatics**
 - Sequence analysis, structural prediction, and functional annotation
