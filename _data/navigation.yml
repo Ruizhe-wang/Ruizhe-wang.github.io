@@ -2,10 +2,10 @@ main:
   - title: "About"
     url: /about/
   - title: "Education"
-    url: /Education/
+    url: /education/
   - title: "Research Projects"
-    url: "/Research Projects/"
+    url: /research-projects/
   - title: "Publications"
-    url: /Publications/
+    url: /publications/
   - title: "Skills"
-    url: /Skills/
+    url: /skills/

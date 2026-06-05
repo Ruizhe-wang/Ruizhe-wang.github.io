@@ -1,24 +1,22 @@
 ---
-permalink: /Skills/
+permalink: /skills/
 title: "Skills"
 author_profile: true
 ---
 
-## Technical Skills
-
-**Programming & Data**
+**Programming and data analysis**
 - Python, R, Java, SQL
-- Data analysis and statistics (linear regression, statistical modelling)
+- Data analysis, statistical modelling, and reproducible computational workflows
 
-**Machine Learning / Deep Learning**
-- Machine learning applied to biological problems
-- Generative adversarial networks (GANs) — integrating evolutionary information into RNA secondary-structure prediction
-- Self-studying advanced topics in deep learning and structural bioinformatics
+**Machine learning and deep learning**
+- Machine learning for biological sequence and structure problems
+- Generative adversarial networks for RNA secondary-structure prediction
+- Ongoing study in deep learning, structural bioinformatics, and computational genomics
 
 **Bioinformatics**
-- Sequence analysis and structural prediction
+- Sequence analysis, structural prediction, and functional annotation
 - Phylogenetic analysis (MEGA)
-- Gene cloning, expression profiling, and functional annotation
+- Gene cloning, expression profiling, and molecular biology data interpretation
 
 ## Languages
 

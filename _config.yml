@@ -27,8 +27,6 @@ markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes
 # Outputting
 permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
-paginate_path: /page:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 include:
@@ -58,7 +56,7 @@ plugins:
 author:
   name   : "Ruizhe Wang"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "MSc in Quantitative Biology & Bioinformatics (ANU). Applying machine learning to structural biology."
+  bio    : "MSc in Quantitative Biology & Bioinformatics (ANU). Machine learning for structural biology and computational genomics."
   location : "China"
   email : "ruizhewang7627@outlook.com"
   links:
@@ -71,15 +69,6 @@ author:
     - label: "CV"
       icon: "fas fa-fw fa-file-pdf"
       url: "/assets/cv.pdf"
-    # - label: "Twitter"
-    #   icon: "fab fa-fw fa-twitter-square"
-    #   url: "https://twitter.com/"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/Ruizhe-wang"
-    # - label: "Instagram"
-    #   icon: "fab fa-fw fa-instagram"
-    #   url: "https://instagram.com/"
 
 footer:
   links:

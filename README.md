@@ -7,30 +7,14 @@ This is my website built with Jekyll using the [Minimal Mistakes Jekyll theme](h
 This website serves as my personal portfolio and academic homepage, featuring:
 
 - About me page
-- Publications and research papers
-- Research projects  
+- Research projects
+- Publications
 - Educational background
+- Technical skills
+- CV
 
 
 The site is built using Jekyll, a static site generator, and hosted on GitHub Pages.
-
----
-
-## Original Template Information
-
-This site was created using the Minimal Mistakes remote theme starter.
-
-Contains basic configuration to get you a site with:
-
-- Sample posts.
-- Sample top navigation.
-- Sample author sidebar with social links.
-- Sample footer links.
-- Paginated home page.
-- Archive pages for posts grouped by year, category, and tag.
-- Sample about page.
-- Sample 404 page.
-- Site wide search.
 
 ---
 
