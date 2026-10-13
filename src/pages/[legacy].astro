@@ -1,0 +1,10 @@
+---
+export function getStaticPaths() {
+  return [
+    ['about', '/en/'], ['education', '/en/cv/'], ['skills', '/en/cv/'],
+    ['research-projects', '/en/research/'], ['publications', '/en/publications/'],
+  ].map(([legacy, destination]) => ({ params: { legacy }, props: { destination } }));
+}
+const { destination } = Astro.props;
+---
+<!doctype html><html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><meta http-equiv="refresh" content={`0;url=${destination}`} /><link rel="canonical" href={new URL(destination, Astro.site)} /><title>Ruizhe Wang — page moved</title></head><body><a href={destination}>Continue to the new page</a></body></html>

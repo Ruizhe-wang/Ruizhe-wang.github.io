@@ -1,0 +1,11 @@
+---
+import { paper, labels, type Locale } from '../data/profile';
+interface Props { lang: Locale; }
+const { lang } = Astro.props;
+const t = labels[lang];
+---
+<div class="paper-links">
+  <a href={paper.arxiv}>[arXiv]</a>
+  <a href={paper.pdf}>[{t.pdf}]</a>
+  <a href={paper.code}>[{t.code}]</a>
+</div>

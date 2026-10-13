@@ -1,0 +1,68 @@
+---
+import { profile, labels, route, type Locale, type Page } from '../data/profile';
+import Icon from '../components/Icon.astro';
+import '../styles/global.css';
+interface Props { lang: Locale; page?: Page; title?: string; description?: string; noindex?: boolean; }
+const { lang, page = 'home', title, description, noindex = false } = Astro.props;
+const t = labels[lang];
+const pageTitle = title ?? `${page === 'home' ? '' : `${t.nav[page]} · `}${profile.name} | ${profile.chineseName}`;
+const canonical = new URL(route(lang, page), Astro.site);
+const navPages: Page[] = ['research', 'publications', 'cv', 'contact'];
+const metaDescription = description ?? labels[lang].heroBio;
+---
+<!doctype html>
+<html lang={lang === 'zh' ? 'zh-CN' : 'en'}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={metaDescription} />
+    <meta name="theme-color" content="#ffffff" />
+    {noindex ? <meta name="robots" content="noindex, follow" /> : <>
+      <link rel="canonical" href={canonical} />
+      <link rel="alternate" hreflang="en" href={new URL(route('en', page), Astro.site)} />
+      <link rel="alternate" hreflang="zh-CN" href={new URL(route('zh', page), Astro.site)} />
+      <link rel="alternate" hreflang="x-default" href={new URL(route('en', page), Astro.site)} />
+    </>}
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={metaDescription} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={new URL('/assets/images/bio-photo.jpg', Astro.site)} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">{t.skip}</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href={route(lang)} aria-label={`${profile.name} — ${t.nav.home}`}><span class="brand-name">{profile.name}<span>{profile.chineseName}</span></span></a>
+        <nav class="desktop-nav" aria-label={lang === 'en' ? 'Main navigation' : '主导航'}>{navPages.map(id => <a href={route(lang, id)} aria-current={page === id ? 'page' : undefined}>{t.nav[id]}</a>)}</nav>
+        <div class="header-actions">
+          <nav class="language-switch" aria-label={t.language}><a href={route('en', page)} lang="en" aria-current={lang === 'en' ? 'true' : undefined}>EN</a><span aria-hidden="true">/</span><a href={route('zh', page)} lang="zh-CN" aria-current={lang === 'zh' ? 'true' : undefined}>中文</a></nav>
+          <details class="mobile-menu"><summary>{t.menu}<span aria-hidden="true">＋</span></summary><nav aria-label={lang === 'en' ? 'Mobile navigation' : '移动端导航'}><a href={route(lang)} aria-current={page === 'home' ? 'page' : undefined}>{t.nav.home}</a>{navPages.map(id => <a href={route(lang, id)} aria-current={page === id ? 'page' : undefined}>{t.nav[id]}</a>)}</nav></details>
+        </div>
+      </div>
+    </header>
+    <div class="academic-shell container">
+      <aside class="profile-sidebar" aria-label={lang === 'en' ? 'Personal profile' : '个人资料'}>
+        <img class="profile-photo" src={profile.portrait} alt={lang === 'en' ? 'Ruizhe Wang' : '王睿哲'} width="551" height="658" fetchpriority="high" />
+        <div class="profile-details">
+          <h2 class="profile-name">{lang === 'en' ? profile.name : profile.chineseName}<span>{lang === 'en' ? profile.chineseName : profile.name}</span></h2>
+          <p class="profile-role">{profile.role[lang]}</p>
+          <p class="profile-bio">{profile.sidebarBio[lang]}</p>
+          <ul class="profile-links">
+            <li><a href={`mailto:${profile.email}`}><Icon name="mail" size={15} />{t.email}</a></li>
+            <li><a href={profile.github}><Icon name="github" size={15} />GitHub</a></li>
+            <li><a href={profile.cv}><Icon name="file" size={15} />{t.nav.cv}</a></li>
+          </ul>
+          <p class="profile-availability">{profile.availability[lang]}</p>
+        </div>
+      </aside>
+      <main id="main" class="content-column">
+        <slot />
+        {page === 'home' && <section class="phd-note"><h2>{t.contactBand}</h2><p>{t.contactBandText}</p><a href={route(lang, 'contact')}>{t.meet}</a></section>}
+      </main>
+    </div>
+    <footer class="site-footer container"><span>© {new Date().getFullYear()} {profile.name}</span><div class="footer-links"><a href={`mailto:${profile.email}`}>{t.email}</a><a href={profile.github}>GitHub</a></div></footer>
+  </body>
+</html>

@@ -1,0 +1,127 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Icon from '../../components/Icon.astro';
+import Interests from '../../components/Interests.astro';
+import PaperLinks from '../../components/PaperLinks.astro';
+import { locales, pages, labels, profile, paper, route, type Locale, type Page } from '../../data/profile';
+
+export function getStaticPaths() {
+  return locales.flatMap(lang => pages.map(page => ({
+    params: { lang, page: page === 'home' ? undefined : page },
+    props: { lang, page },
+  })));
+}
+interface Props { lang: Locale; page: Page; }
+const { lang, page } = Astro.props;
+const t = labels[lang];
+---
+<Layout lang={lang} page={page}>
+  <div class="page-content">
+    {page === 'home' && <>
+      <header class="page-intro"><h1>{t.about}</h1></header>
+      <section class="about-section" aria-label={t.about}>
+        <div class="about-copy">{profile.bio[lang].map(text => <p>{text}</p>)}</div>
+      </section>
+      <Interests lang={lang} />
+      <section class="featured-section" aria-labelledby="selected-title">
+        <h2 id="selected-title">{t.selected}</h2>
+        <article class="featured-work">
+          <a class="work-image" href={`${route(lang, 'research')}#dmt-dens`} aria-label={paper.title}>
+            <img src={paper.image} alt={lang === 'en' ? 'DMT-Dens Figure 3: two-dimensional embeddings of GAST10K, HCL and EPI' : 'DMT-Dens 图 3：GAST10K、HCL 和 EPI 的二维嵌入'} loading="lazy" width="4500" height="2525" />
+          </a>
+          <div class="work-copy">
+            <h3><a href={paper.arxiv}>{paper.title}</a></h3>
+            <p class="authors">{paper.authors.map((author, i) => <>{i > 0 ? ', ' : ''}{author === profile.name ? <strong>{author}</strong> : author}</>)}</p>
+            <p class="paper-meta">{paper.status[lang]} · {paper.year}</p>
+            <p>{paper.description[lang]}</p>
+            <PaperLinks lang={lang} />
+          </div>
+        </article>
+        <p class="image-credit"><a href={paper.imageSource}>{t.figureCaption}</a></p>
+        <a class="all-publications" href={route(lang, 'publications')}>{t.allPublications}</a>
+      </section>
+    </>}
+
+    {page === 'research' && <>
+      <header class="page-intro"><h1>{t.nav.research}</h1><p>{t.researchIntro}</p></header>
+      <Interests lang={lang} />
+      <article id="dmt-dens" class="research-detail">
+        <h2>DMT-Dens</h2>
+        <p class="detail-title">{paper.title}</p>
+        <p class="paper-meta">{paper.status[lang]} · {paper.year}</p>
+        <figure class="research-figure">
+          <a href={paper.image}><img src={paper.image} alt={lang === 'en' ? 'Original Figure 3 from DMT-Dens, comparing two-dimensional embeddings of GAST10K, HCL and EPI' : 'DMT-Dens 原论文图 3，比较 GAST10K、HCL 和 EPI 的二维嵌入'} width="4500" height="2525" /></a>
+          <figcaption><a href={paper.imageSource}>{t.figureCaption}</a></figcaption>
+        </figure>
+        <div class="research-explanation">
+          <div><h3>{t.question}</h3><p>{paper.question[lang]}</p></div>
+          <div><h3>{t.approach}</h3><p>{paper.approach[lang]}</p></div>
+        </div>
+        <div class="resource-row"><PaperLinks lang={lang} /></div>
+      </article>
+    </>}
+
+    {page === 'publications' && <>
+      <header class="page-intro"><h1>{t.publicationsTitle}</h1></header>
+      <section class="publication-list" aria-label={t.nav.publications}>
+        <h2 class="year-label">{paper.year}</h2>
+        <article class="publication">
+          <h3><a href={paper.arxiv}>{paper.title}</a></h3>
+          <p class="authors">{paper.authors.map((author, i) => <>{i > 0 ? ', ' : ''}{author === profile.name ? <strong>{author}</strong> : author}</>)}</p>
+          <p class="paper-meta">{paper.status[lang]} · arXiv:2608.17571</p>
+          <p class="publication-description">{paper.description[lang]}</p>
+          <PaperLinks lang={lang} />
+          <details class="citation"><summary>{t.cite}</summary><pre><code>{paper.bibtex}</code></pre><a href="/assets/dmt-dens.bib" download>{t.downloadBib}</a></details>
+        </article>
+      </section>
+    </>}
+
+    {page === 'cv' && <>
+      <header class="page-intro"><h1>{t.nav.cv}</h1></header>
+      <aside class="cv-download"><a href={profile.cv} download="Ruizhe-Wang-CV.pdf">[{t.downloadCV}]</a><a href={profile.cv}>[{t.cvOpen}]</a></aside>
+      <div class="cv-layout">
+        <section class="cv-section">
+          <h2>{t.experience}</h2>
+          <div class="timeline">
+            <article class="timeline-item"><span class="timeline-date">{t.present}</span><h3>{profile.role[lang]}</h3><p>{t.currentWork}</p></article>
+            <article class="timeline-item"><span class="timeline-date">2025.10 – 2025.12</span><h3>{t.earlierExperience}</h3><p>{t.earlierWork}</p></article>
+          </div>
+        </section>
+        <section class="cv-section">
+          <h2>{t.education}</h2>
+          <div class="timeline">{profile.education.map(item => <article class="timeline-item"><span class="timeline-date">{item.dates}</span><h3>{item.institution[lang]}</h3><p>{item.degree[lang]}</p></article>)}</div>
+        </section>
+        <section class="cv-section">
+          <h2>{t.scholarships}</h2>
+          <ul class="award-list">{profile.scholarships.map(award => <li class="award-item"><span class="award-year">{award.year}</span><div class="award-details"><h3>{award.name[lang]}</h3><p class="award-institution">{award.institution[lang]}</p><p class="award-description">{award.description[lang]}</p></div></li>)}</ul>
+        </section>
+        <section class="cv-section"><h2>{t.skills}</h2><p class="tag-list">{profile.skills.join(', ')}</p></section>
+        <section class="cv-section"><h2>{t.languages}</h2><p>{profile.languages[lang]}</p></section>
+      </div>
+    </>}
+
+    {page === 'contact' && <>
+      <header class="page-intro"><h1>{t.nav.contact}</h1><p>{t.contactIntro}</p></header>
+      <section class="contact-grid" aria-label={t.nav.contact}>
+        <article class="contact-card"><h2>{t.email}</h2><div class="contact-actions"><a class="contact-link" href={`mailto:${profile.email}`}><Icon name="mail" size={17} />{t.sendEmail}</a><button class="text-link copy-email" type="button" data-email={profile.email} data-copied={t.copied} data-failed={t.copyFailed}>{t.copy}</button></div><p class="copy-feedback" role="status" aria-live="polite"></p></article>
+        <article class="contact-card"><h2>GitHub</h2><div class="contact-actions"><a class="contact-link" href={profile.github}><Icon name="github" size={17} />{t.githubLink}</a></div></article>
+      </section>
+      <p class="contact-note">{t.contactBandText}</p>
+      <p class="contact-note">{t.contactNote}</p>
+    </>}
+  </div>
+</Layout>
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>('.copy-email').forEach(button => {
+    button.addEventListener('click', async () => {
+      const feedback = button.parentElement?.querySelector('.copy-feedback');
+      try {
+        await navigator.clipboard.writeText(button.dataset.email ?? '');
+        if (feedback) feedback.textContent = button.dataset.copied ?? '';
+      } catch {
+        if (feedback) feedback.textContent = `${button.dataset.failed ?? ''}${button.dataset.email ?? ''}`;
+      }
+    });
+  });
+</script>

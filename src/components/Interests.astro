@@ -1,0 +1,12 @@
+---
+import { profile, labels, type Locale } from '../data/profile';
+interface Props { lang: Locale; }
+const { lang } = Astro.props;
+const t = labels[lang];
+---
+<section class="interests-section" aria-labelledby="interests-title">
+  <h2 id="interests-title">{t.interestsLabel}</h2>
+  <ul class="interest-list">
+    {profile.interests.map(item => <li><strong>{item.name[lang]}</strong> — {item.description[lang]}</li>)}
+  </ul>
+</section>
