@@ -88,6 +88,15 @@ const t = labels[lang];
           </div>
         </section>
         <section class="cv-section">
+          <h2>{t.cvPublications}</h2>
+          <article class="publication">
+            <h3><a href={paper.arxiv}>{paper.title}</a></h3>
+            <p class="authors">{paper.authors.map((author, i) => <>{i > 0 ? ', ' : ''}{author === profile.name ? <strong>{author}</strong> : author}</>)}</p>
+            <p class="paper-meta">{paper.year} · {paper.cvStatus}</p>
+            <PaperLinks lang={lang} />
+          </article>
+        </section>
+        <section class="cv-section">
           <h2>{t.education}</h2>
           <div class="timeline">{profile.education.map(item => <article class="timeline-item"><span class="timeline-date">{item.dates}</span><h3>{item.institution[lang]}</h3><p>{item.degree[lang]}</p></article>)}</div>
         </section>

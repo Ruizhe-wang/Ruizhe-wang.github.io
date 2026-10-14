@@ -26,14 +26,15 @@ npm run preview
 - `src/data/profile.ts`: shared identity, interests, education, publication metadata and both languages' copy.
 - `src/pages/[lang]/[...page].astro`: home, research, publications, CV and contact layouts.
 - `src/styles/global.css`: the academic sidebar layout, typography and responsive rules.
-- `public/assets/cv.pdf`: downloadable CV; keep its contents aligned with the site.
+- `public/assets/cv.pdf`: downloadable CV.
+- `tools/build_cv.py`: reproducible PDF source, using ReportLab and the original CV's blue headings and Times typography. Run `python3 tools/build_cv.py public/assets/cv.pdf` to regenerate it.
 - `public/assets/dmt-dens.bib`: citation, aligned with the publication metadata.
 
-Current role, PhD availability, name, portrait reuse and interests were confirmed by the owner on 2026-10-13. Education, scholarships and historical DMTME experience come from the supplied CV. The owner requested removal of the older wet-lab, biodiversity and GAN/RNA projects and the lectin manuscript; they are excluded from the website content. At the owner's later request, the downloadable CV is the original pre-redesign PDF, restored byte for byte; it still contains its original historical content.
+Current role, PhD availability, name, portrait reuse and interests were confirmed by the owner on 2026-10-13. Education, scholarships and historical DMTME experience come from the supplied CV. The owner requested removal of the older wet-lab, biodiversity and GAN/RNA projects and the lectin manuscript from the website content, then requested reuse of the original downloadable CV. On 2026-10-14, the owner requested adding DMT-Dens with the status **(with editor)** and the current internship at 钱塘高等研究院（TIAS） to that PDF. Those additions are included while retaining its earlier content and two-page format. The web CV also includes DMT-Dens and this owner-provided editorial status. No unconfirmed internship start date is added.
 
 The only publication is [DMT-Dens](https://arxiv.org/abs/2608.17571). Title, authors, year and code link were verified from this arXiv record. It is described as a **preprint**; no journal acceptance, journal publication or unverified performance claim is implied.
 
-The owner subsequently corrected the website's master's subject to Quantitative Biology and Bioinformatics (计量生物学和生物信息学) and added Weights & Biases (W&B) to the tools list. These corrections are reflected across both languages; the original downloadable PDF remains unchanged.
+The owner subsequently corrected the website's master's subject to Quantitative Biology and Bioinformatics (计量生物学和生物信息学) and added Weights & Biases (W&B) to the tools list. These corrections are reflected across both website languages. The downloadable CV retains its original education and skills wording alongside the later requested publication and internship additions.
 
 `public/assets/images/dmt-dens-embeddings.png` is Figure 3 from the [arXiv HTML version](https://arxiv.org/html/2608.17571v1), downloaded from `https://arxiv.org/html/2608.17571v1/Fig/embedding_paper_final.png`. Authors: Ruizhe Wang, Yixuan Dong, Bolin Yang, Bingo Wing-Kuen Ling, Fuji Yang and Zelin Zang (2026). License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). The image is reproduced without content changes and displayed at a smaller size. Captions link to the original.
 

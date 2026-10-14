@@ -45,7 +45,6 @@ export const profile = {
     { name: { en: 'Agentic frameworks', zh: 'Agentic 框架' }, description: { en: 'Planning, tool use, feedback, and collaboration, and the possibilities of agents in research and other complex tasks.', zh: '关注规划、工具使用、反馈与协作机制，探索智能体在研究及其他复杂任务中的可能性。' } },
   ],
   // Master's subject wording was corrected by the owner on 2026-10-13.
-  // The original downloadable PDF remains unchanged at the owner's request.
   education: [
     { dates: '2023.07 – 2025.07', institution: { en: 'The Australian National University', zh: '澳大利亚国立大学' }, degree: { en: 'Master of Science in Quantitative Biology and Bioinformatics', zh: '计量生物学和生物信息学理学硕士' } },
     { dates: '2020.09 – 2023.06', institution: { en: 'Shandong University', zh: '山东大学' }, degree: { en: 'Bachelor of Biological Science', zh: '生物科学学士' } },
@@ -80,6 +79,8 @@ export const paper = {
   authors: ['Ruizhe Wang', 'Yixuan Dong', 'Bolin Yang', 'Bingo Wing-Kuen Ling', 'Fuji Yang', 'Zelin Zang'],
   year: 2026,
   status: { en: 'Preprint', zh: '预印本' },
+  // Editorial status supplied by the owner for the CV on 2026-10-14.
+  cvStatus: '(with editor)',
   arxiv: 'https://arxiv.org/abs/2608.17571',
   pdf: 'https://arxiv.org/pdf/2608.17571',
   code: 'https://github.com/Ruizhe-wang/DMT-Dens',
@@ -126,7 +127,7 @@ export const labels = {
     publicationsTitle: 'Publication', publicationsIntro: 'Papers, with links to the work behind them.',
     cite: 'Cite this work', downloadBib: 'Download BibTeX',
     cvTitle: 'A little background.', cvIntro: 'My research experience and education, with a downloadable CV for the details.',
-    experience: 'Research experience', present: 'Current', education: 'Education', scholarships: 'Scholarships and awards', skills: 'Tools I work with', languages: 'Languages',
+    experience: 'Research experience', present: 'Current', cvPublications: 'Publication', education: 'Education', scholarships: 'Scholarships and awards', skills: 'Tools I work with', languages: 'Languages',
     currentWork: 'Research interests: AI for Science, manifold learning, machine learning, agentic frameworks, and the boundaries of AI capabilities.',
     earlierExperience: 'AI for Science research intern', earlierProject: 'DMTME project',
     earlierWork: 'Computational experiments and data analysis for deep manifold learning.',
@@ -155,7 +156,7 @@ export const labels = {
     publicationsTitle: 'Publication', publicationsIntro: '论文，以及相关代码和资料。',
     cite: '引用这项工作', downloadBib: '下载 BibTeX',
     cvTitle: '一路走来的经历。', cvIntro: '研究经历、教育背景，以及一份可以下载的简历。',
-    experience: '研究经历', present: '目前', education: '教育背景', scholarships: '奖学金与荣誉', skills: '常用工具', languages: '语言能力',
+    experience: '研究经历', present: '目前', cvPublications: 'Publication', education: '教育背景', scholarships: '奖学金与荣誉', skills: '常用工具', languages: '语言能力',
     currentWork: '研究兴趣：AI for Science、流形学习、机器学习、Agentic 框架与 AI 能力边界。',
     earlierExperience: 'AI for Science 研究实习', earlierProject: 'DMTME 项目',
     earlierWork: '参与深度流形学习相关的计算实验与数据分析。',
