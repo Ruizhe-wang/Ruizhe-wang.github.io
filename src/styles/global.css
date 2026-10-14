@@ -143,6 +143,10 @@ strong { font-weight: 700; }
 .contact-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 12px 24px; margin-top: 10px; }
 .contact-link { display: inline-flex; align-items: center; gap: 8px; font-size: 15px; }
 .contact-actions .copy-email { font-size: 14px; }
+.wechat-figure { margin-top: 10px; }
+.wechat-image-link { display: block; width: min(320px, 100%); }
+.wechat-image-link img { width: 100%; height: auto; border: 1px solid var(--line); }
+.wechat-figure figcaption { margin-top: 8px; color: var(--muted); font-size: 14px; }
 .copy-feedback { margin-top: 4px; font-size: 13px; color: var(--muted); }
 .copy-feedback:empty { display: none; }
 .contact-note { margin-top: 20px; }

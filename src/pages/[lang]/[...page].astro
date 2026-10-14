@@ -114,6 +114,13 @@ const t = labels[lang];
       <section class="contact-grid" aria-label={t.nav.contact}>
         <article class="contact-card"><h2>{t.email}</h2><div class="contact-actions"><a class="contact-link" href={`mailto:${profile.email}`}><Icon name="mail" size={17} />{t.sendEmail}</a><button class="text-link copy-email" type="button" data-email={profile.email} data-copied={t.copied} data-failed={t.copyFailed}>{t.copy}</button></div><p class="copy-feedback" role="status" aria-live="polite"></p></article>
         <article class="contact-card"><h2>GitHub</h2><div class="contact-actions"><a class="contact-link" href={profile.github}><Icon name="github" size={17} />{t.githubLink}</a></div></article>
+        <article class="contact-card contact-wechat">
+          <h2>{t.wechat}</h2>
+          <figure class="wechat-figure">
+            <a class="wechat-image-link" href={profile.wechatQR} aria-label={t.wechatImageOpen}><img src={profile.wechatQR} alt={t.wechatAlt} width="888" height="1131" loading="lazy" /></a>
+            <figcaption>{t.wechatCaption}</figcaption>
+          </figure>
+        </article>
       </section>
       <p class="contact-note">{t.contactBandText}</p>
       <p class="contact-note">{t.contactNote}</p>
