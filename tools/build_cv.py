@@ -1,7 +1,7 @@
 """Rebuild the English CV, retaining the supplied CV's content and visual style.
 
 Requires reportlab. The 2026-10-14 additions are DMT-Dens (with editor)
-and the current research internship at 钱塘高等研究院（TIAS）.
+and the current research internship at Tsientang Institute for Advanced Study (TIAS).
 Run with an output path; the site serves public/assets/cv.pdf.
 """
 
@@ -13,7 +13,6 @@ from reportlab.lib.enums import TA_CENTER, TA_RIGHT
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
-from reportlab.pdfbase.cidfonts import UnicodeCIDFont
 from reportlab.platypus import (
     SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, KeepTogether,
 )
@@ -31,14 +30,6 @@ def build(output):
         normal, strong = 'CV', 'CV-Bold'
     else:
         normal, strong = 'Times-Roman', 'Times-Bold'
-    songti = font_dir / 'Songti.ttc'
-    if songti.exists():
-        pdfmetrics.registerFont(TTFont('CV-CJK', str(songti), subfontIndex=0))
-        cjk = 'CV-CJK'
-    else:
-        pdfmetrics.registerFont(UnicodeCIDFont('STSong-Light'))
-        cjk = 'STSong-Light'
-
     blue = colors.HexColor('#2B73BD')
     width = 595.32001 - 2 * 33.36
     body = ParagraphStyle('Body', fontName=normal, fontSize=10.56,
@@ -104,18 +95,12 @@ def build(output):
 
     section('Publication')
     # DMT-Dens authors and title were verified from arXiv; editorial status is
-    # owner-provided. The earlier publication is retained from the original CV.
+    # owner-provided. The earlier lectin publication was removed at the owner's request.
     story.append(p(
         '1. <b>Ruizhe Wang</b>, Yixuan Dong, Bolin Yang, Bingo Wing-Kuen Ling, Fuji Yang, '
         'Zelin Zang. DMT-Dens: Density-preserving manifold visualization for biological data. '
         '2026 <b>(with editor)</b>. '
         '<link href="https://arxiv.org/abs/2608.17571" color="#2B73BD">arXiv:2608.17571</link>'))
-    story.append(p(
-        '2. Yu, S., <b>Wang, R.</b>, Jiang, C., Jiang, C., Liu, Y., Zhu, Q*. '
-        'Molecular characterization and functional analysis of a Fucose-binding Lectin Isolated '
-        'from <i>Trachidermus fasciatus</i> (TfFBL) Involved in Antibacterial Defense. '
-        'Fish &amp; shellfish Immunology (Submitted to the journal)'))
-
     section('Research Projects')
     project('Molecular characterization and functional analysis of a Fucose-binding Lectin '
             'from roughskin sculpin <i>Trachidermus fasciatus</i>', [
@@ -151,7 +136,7 @@ def build(output):
     ])
 
     section('Internship Experience')
-    project(f'Current &nbsp; TIAS (<font name="{cjk}">钱塘高等研究院</font>) - Research Intern', [
+    project('Current &nbsp; Tsientang Institute for Advanced Study (TIAS) - Research Intern', [
         'Research interests: AI, machine learning, AI for Science, manifold learning, and agentic frameworks.',
     ])
     project('2025.10 - 2025.12 &nbsp; DMTME Project - AI for Science (AI4Sci) Research Intern', [

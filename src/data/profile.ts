@@ -14,7 +14,7 @@ export const profile = {
   portrait: '/assets/images/bio-photo.jpg',
   cv: '/assets/cv.pdf',
   dmtmePaper: 'https://arxiv.org/abs/2410.19504',
-  role: { en: 'Research intern at TIAS', zh: '钱塘高等研究院（TIAS）研究实习生' },
+  role: { en: 'Research intern at Tsientang Institute for Advanced Study (TIAS)', zh: '钱塘高等研究院（TIAS）研究实习生' },
   availability: { en: 'Looking for PhD opportunities', zh: '正在寻找 PhD 研究机会' },
   sidebarBio: {
     en: "I completed my master's in Quantitative Biology and Bioinformatics at ANU. My interests include AI, machine learning, AI for Science, and agentic frameworks. I look forward to exploring new research questions and methods.",
