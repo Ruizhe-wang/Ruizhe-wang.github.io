@@ -99,7 +99,7 @@ def build(output):
     story.append(p(
         '1. <b>Ruizhe Wang</b>, Yixuan Dong, Bolin Yang, Bingo Wing-Kuen Ling, Fuji Yang, '
         'Zelin Zang. DMT-Dens: Density-preserving manifold visualization for biological data. '
-        '2026 <b>(with editor)</b>. '
+        '2026. Submitted to <i>Bioinformatics</i> <b>(with editor)</b>. '
         '<link href="https://arxiv.org/abs/2608.17571" color="#2B73BD">arXiv:2608.17571</link>'))
     section('Research Projects')
     project('Molecular characterization and functional analysis of a Fucose-binding Lectin '

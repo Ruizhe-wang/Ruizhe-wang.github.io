@@ -14,6 +14,7 @@ export function getStaticPaths() {
 interface Props { lang: Locale; page: Page; }
 const { lang, page } = Astro.props;
 const t = labels[lang];
+const submission = `${t.submittedTo}${lang === 'en' ? ' ' : ''}${paper.journal} ${paper.cvStatus}`;
 ---
 <Layout lang={lang} page={page}>
   <div class="page-content">
@@ -32,7 +33,7 @@ const t = labels[lang];
           <div class="work-copy">
             <h3><a href={paper.arxiv}>{paper.title}</a></h3>
             <p class="authors">{paper.authors.map((author, i) => <>{i > 0 ? ', ' : ''}{author === profile.name ? <strong>{author}</strong> : author}</>)}</p>
-            <p class="paper-meta">{paper.status[lang]} · {paper.year}</p>
+            <p class="paper-meta">{paper.status[lang]} · {paper.year} · {submission}</p>
             <p>{paper.description[lang]}</p>
             <PaperLinks lang={lang} />
           </div>
@@ -48,7 +49,7 @@ const t = labels[lang];
       <article id="dmt-dens" class="research-detail">
         <h2>DMT-Dens</h2>
         <p class="detail-title">{paper.title}</p>
-        <p class="paper-meta">{paper.status[lang]} · {paper.year}</p>
+        <p class="paper-meta">{paper.status[lang]} · {paper.year} · {submission}</p>
         <figure class="research-figure">
           <a href={paper.image}><img src={paper.image} alt={lang === 'en' ? 'Original Figure 3 from DMT-Dens, comparing two-dimensional embeddings of GAST10K, HCL and EPI' : 'DMT-Dens 原论文图 3，比较 GAST10K、HCL 和 EPI 的二维嵌入'} width="4500" height="2525" /></a>
           <figcaption><a href={paper.imageSource}>{t.figureCaption}</a></figcaption>
@@ -68,7 +69,7 @@ const t = labels[lang];
         <article class="publication">
           <h3><a href={paper.arxiv}>{paper.title}</a></h3>
           <p class="authors">{paper.authors.map((author, i) => <>{i > 0 ? ', ' : ''}{author === profile.name ? <strong>{author}</strong> : author}</>)}</p>
-          <p class="paper-meta">{paper.status[lang]} · arXiv:2608.17571</p>
+          <p class="paper-meta">{paper.status[lang]} · arXiv:2608.17571 · {submission}</p>
           <p class="publication-description">{paper.description[lang]}</p>
           <PaperLinks lang={lang} />
           <details class="citation"><summary>{t.cite}</summary><pre><code>{paper.bibtex}</code></pre><a href="/assets/dmt-dens.bib" download>{t.downloadBib}</a></details>
@@ -92,7 +93,7 @@ const t = labels[lang];
           <article class="publication">
             <h3><a href={paper.arxiv}>{paper.title}</a></h3>
             <p class="authors">{paper.authors.map((author, i) => <>{i > 0 ? ', ' : ''}{author === profile.name ? <strong>{author}</strong> : author}</>)}</p>
-            <p class="paper-meta">{paper.year} · {paper.cvStatus}</p>
+            <p class="paper-meta">{paper.year} · {submission}</p>
             <PaperLinks lang={lang} />
           </article>
         </section>

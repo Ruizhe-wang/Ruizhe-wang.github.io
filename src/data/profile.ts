@@ -82,6 +82,8 @@ export const paper = {
   status: { en: 'Preprint', zh: '预印本' },
   // Editorial status supplied by the owner for the CV on 2026-10-14.
   cvStatus: '(with editor)',
+  // Submission journal supplied by the owner on 2026-10-15; not an acceptance.
+  journal: 'Bioinformatics',
   arxiv: 'https://arxiv.org/abs/2608.17571',
   pdf: 'https://arxiv.org/pdf/2608.17571',
   code: 'https://github.com/Ruizhe-wang/DMT-Dens',
@@ -126,7 +128,7 @@ export const labels = {
     researchTitle: 'Questions worth exploring.', researchIntro: "My interests span AI, machine learning, AI for Science, manifold learning, and agentic frameworks. I hope to explore new questions and methods across these areas. DMT-Dens, introduced below, is one of my completed research projects.",
     question: 'The question', approach: 'The approach', resources: 'Explore the work',
     publicationsTitle: 'Publication', publicationsIntro: 'Papers, with links to the work behind them.',
-    cite: 'Cite this work', downloadBib: 'Download BibTeX',
+    cite: 'Cite this work', downloadBib: 'Download BibTeX', submittedTo: 'Submitted to',
     cvTitle: 'A little background.', cvIntro: 'My research experience and education, with a downloadable CV for the details.',
     experience: 'Research experience', present: 'Current', cvPublications: 'Publication', education: 'Education', scholarships: 'Scholarships and awards', skills: 'Tools I work with', languages: 'Languages',
     currentWork: 'Research interests: AI for Science, manifold learning, machine learning, agentic frameworks, and the boundaries of AI capabilities.',
@@ -156,7 +158,7 @@ export const labels = {
     researchTitle: '从问题出发，慢慢探索。', researchIntro: '我的研究兴趣包括 AI、机器学习、AI for Science、流形学习与 Agentic 框架，希望在这些方向之间接触新的问题与方法。下方的 DMT-Dens 是我已完成的一项研究工作。',
     question: '关心的问题', approach: '采用的方法', resources: '进一步了解',
     publicationsTitle: 'Publication', publicationsIntro: '论文，以及相关代码和资料。',
-    cite: '引用这项工作', downloadBib: '下载 BibTeX',
+    cite: '引用这项工作', downloadBib: '下载 BibTeX', submittedTo: '投稿期刊：',
     cvTitle: '一路走来的经历。', cvIntro: '研究经历、教育背景，以及一份可以下载的简历。',
     experience: '研究经历', present: '目前', cvPublications: 'Publication', education: '教育背景', scholarships: '奖学金与荣誉', skills: '常用工具', languages: '语言能力',
     currentWork: '研究兴趣：AI for Science、流形学习、机器学习、Agentic 框架与 AI 能力边界。',
